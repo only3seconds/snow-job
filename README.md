@@ -30,7 +30,18 @@ Elastic-job是ddframe中dd-job的作业模块中分离出来的分布式弹性�
 ### 重要参考链接
 1. [Elastic-job分布式定时任务框架](https://www.cnblogs.com/wyb628/p/7682580.html)
 
-### TODO 
+## LTS by only3seconds
+LTS(Light Task Scheduler) 是一个轻量级分布式任务调度框架，主要有以下三种角色：
+
+- JobClient: 	主要负责提交任务和接收任务执行反馈结果
+- JobTracker: 任务调度中心，负责接收并分配任务
+- TaskTracker: 负责执行任务，执行完反馈给 JobClient
+
+各个节点都是无状态的，可以部署多个，来实现负载均衡，实现更大的负载量, 并且框架具有很好的容错能力。 采用Zookeeper暴露节点信息，master选举。Mongo存储任务队列和任务执行日志, netty做底层通信。
+
+
+
+## TODO 
 
 1. xxl-job - 重要
 2. elastic-job   - 重要
@@ -45,7 +56,7 @@ Elastic-job是ddframe中dd-job的作业模块中分离出来的分布式弹性�
 11. SkySchedule [源码](https://github.com/gantianxing/skySchedule)，[文档](http://moon-walker.iteye.com/blog/2386504) 注：基于netty
 12. brave-dis-job [源码](https://github.com/zhangjun075/brave-dis-job) [文档](https://www.jianshu.com/p/72658c73bc77) 注：很小，有基本设计框架
 
-### 参考链接 
+## 参考链接 
 1. 分布式定时任务调度系统技术选型: https://www.cnblogs.com/davidwang456/p/9057839.html
 2. 这些优秀的国产分布式任务调度系统，你用过几个 : https://blog.csdn.net/qq_16216221/article/details/70314337
 3. 我所理解的分布式任务调度: https://www.jianshu.com/p/9bf9ddaac438
