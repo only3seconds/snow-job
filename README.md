@@ -2,7 +2,7 @@
 
 ## Elastic-job by thinkingfioa
 Elastic-job是ddframe中dd-job的作业模块中分离出来的分布式弹性作业框架。该项目基于成熟的开源产品Quartz和Zookeeper
-及其客户端Curator进行二次开发。
+及其客户端Curator进行二次开发。elastic-job主要的设计理念是无中心化的分布式定时调度框架。
 
 ### 主要功能
 - 定时任务： 基于成熟的定时任务作业框架Quartz cron表达式执行定时任务。
@@ -21,14 +21,23 @@ Elastic-job是ddframe中dd-job的作业模块中分离出来的分布式弹性�
 - 运维平台：提供运维界面，可以管理作业和注册中心。
 
 ### 目录介绍
+1. elastic-job-platform ----- Maven版本依赖，编译elastic-job主项目前需要先编译本项目
 1. elastic-job-core ----- 核心模块，只通过Quartz和Curator就可执行分布式作业
 2. elastic-job-spring ----- 对spring支持的模块，包括命名空间、依赖注入、占位符等
 3. elastic-job-console ----- web控制台
 4. elastic-job-example 
 5. elastic-job-test
 
+### 作业类型
+1. Single类型作业 ----- 周期性执行普通的定时任务，但提供弹性扩缩容和分片
+2. Dataflow类型作业 ----- 先fetchData, 然后调用processData处理数据。适用于流式不间歇的数据处理
+3. Script类型作业  ----- Script类型作业为脚本类型作业，支持shell、python和perl等所有类型脚本。
+4. ELK ----- elasticSearch + logstash + kibana 
+
 ### 重要参考链接
-1. [Elastic-job分布式定时任务框架](https://www.cnblogs.com/wyb628/p/7682580.html)
+1. [Elastic-job分布式定时任务框架](https://www.cnblogs.com/wyb628/p/7682580.html)  -- 老版本
+2. [官网-elasticjob-lite](http://elasticjob.io/docs/elastic-job-lite/00-overview/)
+3. [Elastic-Job——分布式定时任务框架](https://blog.csdn.net/u014401141/article/details/78676248)
 
 ### TODO 
 
