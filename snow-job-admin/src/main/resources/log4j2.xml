@@ -42,7 +42,7 @@
     <Loggers>
 
         <!-- log4j2 asyn more fast-->
-        <AsyncLogger name="org.lwl" level ="${output_log_level}" additivity="false" includeLocation="true">
+        <AsyncLogger name="org.snow" level="${output_log_level}" additivity="false" includeLocation="true">
             <appender-ref ref="RollingFile"/>
             <appender-ref ref="RollingFile1"/>
             <appender-ref ref="Console"/>

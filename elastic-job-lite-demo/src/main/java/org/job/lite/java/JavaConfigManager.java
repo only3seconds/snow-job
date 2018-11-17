@@ -8,6 +8,8 @@ import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 
 /**
+ * Java启动方式配置.
+ *
  * @author thinking_fioa 2018/11/16
  */
 
@@ -25,9 +27,8 @@ public class JavaConfigManager {
     JobCoreConfiguration simpleCoreConfig
         = JobCoreConfiguration.newBuilder("demoSimpleJob", "0/15 * * * * ?", 10).build();
     SimpleJobConfiguration simpleJobConfig = new SimpleJobConfiguration(simpleCoreConfig,
-        MyElasticJob.class.getCanonicalName());
+        JavaElasticJob.class.getCanonicalName());
     // 定义Lite作业根配置
-    LiteJobConfiguration simpleJobRootConfig = LiteJobConfiguration.newBuilder(simpleJobConfig).build();
-    return simpleJobRootConfig;
+    return LiteJobConfiguration.newBuilder(simpleJobConfig).build();
   }
 }
