@@ -86,5 +86,6 @@ LTS(Light Task Scheduler) 是一个轻量级分布式任务调度框架，主要
 7. 关于分布式任务调度平台，数人云的经验都在这里：https://www.sohu.com/a/192957718_332175 [不开源]
 8. 分布式任务调度框架-brave-dis-job: https://www.jianshu.com/p/72658c73bc77
 9. 分布式调度引擎-JobKeepper:  http://www.cstor.cn/proTextdetail_3613.html。[公司产品，无源代码]
+10. 分布式框架大集合 https://blog.csdn.net/u012379844/article/details/82716146
 
 
