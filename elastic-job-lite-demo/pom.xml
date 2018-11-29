@@ -47,6 +47,13 @@
             <artifactId>elastic-job-lite-spring</artifactId>
             <version>${com.dangdang.version}</version>
         </dependency>
+        <!-- zookeeper start -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.9</version>
+        </dependency>
+        <!-- zookeeper end -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
