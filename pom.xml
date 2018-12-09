@@ -21,6 +21,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <lombok.version>1.16.4</lombok.version>
   </properties>
 
   <dependencyManagement>
@@ -41,6 +42,12 @@
         <artifactId>disruptor</artifactId>
         <version>3.4.2</version>
       </dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>${lombok.version}</version>
+          <scope>provided</scope>
+      </dependency>
       <!-- log4j2 end. -->
       <dependency>
         <groupId>junit</groupId>
@@ -48,6 +55,7 @@
         <version>4.11</version>
         <scope>test</scope>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
